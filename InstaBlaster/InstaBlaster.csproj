@@ -6,4 +6,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InstaBlaster.Infrastructure.Implementations\InstaBlaster.Infrastructure.Implementations.csproj" />
+    <ProjectReference Include="..\InstaBlaster.UseCases\InstaBlaster.UseCases.csproj" />
+  </ItemGroup>
+
 </Project>

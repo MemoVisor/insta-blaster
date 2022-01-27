@@ -15,6 +15,7 @@ namespace InstaBlaster.Controllers
             this.mediator = mediator;
         }
 
+        [HttpGet("{postUrl}")]
         public async Task<string[]> GetImages(string postUrl)
         {
             return await mediator.Send(new GetInstaImagesQuery { PostUrl = postUrl });
