@@ -16,7 +16,7 @@ namespace InstaBlaster.UseCases.GetInstaImages
         /// <inheritdoc/>
         public Task<string[]> Handle(GetInstaImagesQuery request, CancellationToken cancellationToken)
         {
-            var imageLinks = parser.GetImages(request.PostUrl);
+            var imageLinks = parser.GetImages(request.Post.PostUrl);
             return Task.FromResult(imageLinks);
         }
     }

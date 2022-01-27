@@ -15,10 +15,10 @@ namespace InstaBlaster.Controllers
             this.mediator = mediator;
         }
 
-        [HttpGet("{postUrl}")]
-        public async Task<string[]> GetImages(string postUrl)
+        [HttpGet("images")]
+        public async Task<string[]> GetImages(PostDto dto)
         {
-            return await mediator.Send(new GetInstaImagesQuery { PostUrl = postUrl });
+            return await mediator.Send(new GetInstaImagesQuery { Post = dto });
         }
     }
 }

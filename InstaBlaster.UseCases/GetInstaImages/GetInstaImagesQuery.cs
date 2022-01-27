@@ -4,6 +4,6 @@ namespace InstaBlaster.UseCases.GetInstaImages
 {
     public class GetInstaImagesQuery : IRequest<string[]>
     {
-        public string PostUrl { get; init; }
+        public PostDto Post { get; init; }
     }
 }
